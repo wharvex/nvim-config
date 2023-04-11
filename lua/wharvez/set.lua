@@ -14,4 +14,5 @@ vim.opt.backup = false
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.termguicolors = true
+vim.opt.scrolloff = 8
 vim.g.netrw_list_hide = [[^.*\.class$]]

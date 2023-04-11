@@ -28,6 +28,27 @@ return require("packer").startup(function(use)
 	use("mfussenegger/nvim-dap")
 	use("folke/neodev.nvim")
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	use("Olical/conjure")
+	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	})
+	use("marko-cerovac/material.nvim")
+	use({
+		"windwp/nvim-autopairs",
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
+	})
+	use({ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" })
+	use({
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("gitsigns").setup()
+		end,
+	})
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v1.x",
